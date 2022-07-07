@@ -50,7 +50,7 @@
   <section class="hero">
      <div class="container">
          <h1 class="hero-title">Эффективные решения <br/> для вашего бизнеса</h1>
-       <button  type="button" class="button primary">Заказать услугу</button>
+       <button  type="button" class="button primary" data-modal-open>Заказать услугу</button>
       </div>  
   </section>  
    <!-- Наши преимущества -->
@@ -391,5 +391,18 @@
 
    </div>
 </footer>
+<!-- modal -->
+<div class="backdrop is-hidden " data-modal>
+   <div class="modal">
+      <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum officia illum inventore veritatis, deserunt sint ipsa odit exercitationem rem ex, incidunt sequi quasi, odio maiores fugiat quos. Ratione, enim similique.</p> -->
+      <button data-modal-close type="button" class="icon-close modal"> 
+         <svg class="close-icon" width="30" height="30">
+            <use href="./imagesforhomwork/symbol-defs.svg#icon-close-2"></use>
+         </svg>
+      
+   </button>
+   </div>
+</div>
+<script src="./js/modal.js"></script>
 </body>
 </html>
