@@ -273,9 +273,14 @@ opacity: 1;
  .portfolio-list .item:not(:last-child){
     margin-right: 8px;
  }
+ .portfolio-list .item{
+   transition: box-shadow 250ms var(--cubic-bazer);
+ }
  .portfolio-list .item:hover,:focus{
+   transition: box-shadow 250ms var(--cubic-bazer);
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),0 1px 2px 0 rgba(0, 0, 0, 0.08),
    0 3px 1px 0 rgba(0, 0, 0, 0.1);
+   
  }
 
  /* button secondary */
@@ -294,10 +299,14 @@ opacity: 1;
       /* identical to box height, or 162% */
       text-align: center;
       letter-spacing: 0.03em;
+      transition: color 250ms var(--cubic-bazer),    
+       background-color 250ms var(--cubic-bazer);
       
 }
 .button.secondary:hover,
 .button.secondary:focus{
+   transition: color 250ms var(--cubic-bazer),
+    background-color 250ms var(--cubic-bazer);
    background-color: var(--accent-text-color);
    color: var(--accent-text-color-white);
 }
@@ -509,6 +518,7 @@ position: relative;
       height: 44px;
       border-radius: 50% 50%;
       color: var(--color-icon);
+      transition: color  250ms var(--cubic-bazer),background-color 250ms var(--cubic-bazer);
       }
       
    .social-link{
@@ -517,6 +527,7 @@ position: relative;
  
 .area-icon:hover,
 .area-icon:focus{
+   transition: color 250ms var(--cubic-bazer),background-color 250ms var(--cubic-bazer);
    color: var(--accent-text-color-white);
    background-color:  var(--accent-text-color);
 }
@@ -560,6 +571,7 @@ position: relative;
       border: 1px solid var(--color-icon);
       border-radius: 4px;
       color: var(--color-icon);
+      transition: color 250ms var(--cubic-bazer),border-color 250ms var(--cubic-bazer);
 } 
 
 .constant-clients .icon:nth-child(-n + 6){
@@ -568,6 +580,7 @@ position: relative;
 
 .constant-clients .link:hover,
 .constant-clients .link:focus{
+   transition: color 250ms var(--cubic-bazer), border-color 250ms var(--cubic-bazer);
    color: var(--accent-text-color);
    border-color: var(--accent-text-color);
 }
@@ -626,8 +639,10 @@ position: relative;
       /* or 171% */
       letter-spacing: 0.03em;
       text-decoration: none;
+      transition: color 250ms var(--cubic-bazer); 
 }
 .address .link:hover,.link:focus{
+   transition: color 250ms var(--cubic-bazer);
    color: var(--accent-text-color);
 }
 
@@ -677,7 +692,7 @@ position: relative;
    border-radius: 50% 50%;
    color: var(--accent-text-color-white);
    background-color:var(--color-footer-icon-area) ;
-   
+   transition: color 250ms var(--cubic-bazer),background-color  250ms var(--cubic-bazer);
 }
 
 
@@ -687,6 +702,7 @@ position: relative;
 
 .footer-icon:hover,
 .footer-icon:focus {
+   transition: color 250ms var(--cubic-bazer), background-color 250ms var(--cubic-bazer);
    color: var(--accent-text-color-white);
    background-color: var(--accent-text-color);
 }
@@ -708,6 +724,7 @@ position: relative;
    box-shadow: 1px 4px 6px 0 var(--color-shadow-proects), 
    0 4px 4px 0 rgba(0, 0, 0, 0.06), 
    0 1px 1px 0 rgba(0, 0, 0, 0.12);
+   transition: box-shadow 250ms var(--cubic-bazer);
 }
 
 .portfolio-proects .item{
@@ -715,6 +732,7 @@ position: relative;
    margin-right: 30px;
    margin-bottom: 30px;
    border: 1px solid #EEEEEE;
+   transition: box-shadow 250ms var(--cubic-bazer);
 }
 
 .portfolio-proects .item:nth-child(3n){
@@ -763,11 +781,13 @@ margin-right: 0;
    background: rgba(0, 0, 0, 0.2);
    opacity: 1;
    transition: opacity 250ms var(--cubic-bazer);
+   
 }
 .backdrop.is-hidden{
    opacity: 0;
    pointer-events: none;
 }
+
 .backdrop.is-hidden .modal{
    transform: scale(1.1) translate(-50%, -50%);
 }
@@ -780,11 +800,29 @@ margin-right: 0;
    min-width: 528px;
    min-height: 581px;
    background-color: var(--back-round-color);
-      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-      border-radius: 4px;
+   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+   border-radius: 4px;
       
 }
-.icon-close .modal{
-   display: flex;
+
+.icon-close {
    position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 30px;
+   height: 30px;
+   top: 8px;
+   right: 8px;
+   background-color: var(--back-round-color);
+   border: 1px solid rgba(0, 0, 0, 0.1);
+   border-radius: 50%;
+   margin: 0;
+   padding: 0;
+   cursor: pointer;
+   
 }
+.close-icon{
+fill: #212121;
+}
+
