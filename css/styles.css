@@ -251,6 +251,7 @@ opacity: 1;
       cursor: pointer;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
       border-radius: 4px;
+      border: none;
    padding-top: 10px;
    padding-bottom: 10px;
    padding-left: 32px;
@@ -275,9 +276,11 @@ opacity: 1;
     margin-right: 8px;
  }
  .portfolio-list .item{
+    border-radius: 4px;
    transition: box-shadow 250ms var(--cubic-bazer);
  }
- .portfolio-list .item:hover,:focus{
+ .portfolio-list .item:hover,
+ .portfolio-list .item:focus{
    transition: box-shadow 250ms var(--cubic-bazer);
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),0 1px 2px 0 rgba(0, 0, 0, 0.08),
    0 3px 1px 0 rgba(0, 0, 0, 0.1);
@@ -290,6 +293,7 @@ opacity: 1;
    
    padding: 6px 22px;
    border-radius: 4px;
+   border: none;
    background-color: var(--back-round-color-team);
    color: var(--second-text-color);
    font-family: 'Roboto';
@@ -721,7 +725,8 @@ position: relative;
    justify-content: center;
 }
 
-.portfolio-proects .cards-item:hover,:focus{
+.portfolio-proects .cards-item:hover,
+.portfolio-proects .cards-item:focus{
    box-shadow: 1px 4px 6px 0 var(--color-shadow-proects), 
    0 4px 4px 0 rgba(0, 0, 0, 0.06), 
    0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -776,7 +781,6 @@ margin-right: 0;
    font-size: 18px ;
    line-height:1.55; 
    letter-spacing: 3%;
-   text-align: center;
    color: var(--accent-text-color-white);
 }
 .cards-item:hover .overlay{
